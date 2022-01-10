@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="/css/style.css" />     <script src="/JS/index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-------------------------------------------------header-->
+      <header>
+        <img src="/IMG/syn.svg" alt="" width="8%" />
+        <h1>My weather</h1>
+        <form action="">
+          <div class="search">
+            <input
+              type="search"
+              name="nameCity"
+              id="nameCity"
+
+            />
+            <input type="submit" value="" />
+          </div>
+        </form>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a onclick="hiddenMain2(this)" href="#"> Today</a>
+            <a onclick="showMain2(this)" href="#"> week </a>
+          </li>
+        </ul>
+      </nav>
+      <!-------------------------------------------------main(HIDEN)-->
+
+      <div id="main2" class="hiddenmain2">
+        <div class="weather5day"  >
+          <div   >
+            <h2   ></h2>
+            <h2 ></h2>
+            <img src="" alt="imgTemp" />
+            <h2></h2>
+            <h2></h2>
+          </div>
+          <div>
+            <h2></h2>
+            <h2></h2>
+            <img src="" alt="imgTemp" />
+            <h2></h2>
+            <h2></h2>
+          </div>
+          <div>
+            <h2></h2>
+            <h2></h2>
+            <img src="" alt="imgTemp" />
+            <h2></h2>
+            <h2></h2>
+          </div>
+          <div>
+            <h2></h2>
+            <h2></h2>
+            <img src="" alt="imgTemp" />
+            <h2></h2>
+            <h2></h2>
+          </div>
+          <div>
+            <h2></h2>
+            <h2></h2>
+            <img src="" alt="imgTemp" />
+            <h2></h2>
+            <h2></h2>
+          </div>
+        </div>
+        <div  >
+          <table class="tableTemp5Day">
+            <tr>
+              <th>TODAY</th>
+              <th>7pm</th>
+              <th>8pm</th>
+              <th>9pm</th>
+              <th>10pm</th>
+              <th>11pm</th>
+              <th>12pm</th>
+            </tr>
+            <tr id="tableIMG1">
+              <td><img src="" alt="" /></td>
+              <td><img src="" alt="" /></td>
+              <td><img src="" alt="" /></td>
+              <td><img src="" alt="" /></td>
+              <td><img src="" alt="" /></td>
+              <td><img src="" alt="" /></td>
+              <td><img src="" alt="" /></td>
+            </tr>
+            <tr id="forecast1">
+              <td>Forecast</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="temp1">
+              <td>Temp(&#176;C)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="rFeel1">
+              <td>RealFeel</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id="wind1">
+              <td>Wind(km/h)</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-------------------------------------------------MAIN -->
+      <div id="main" class="showmain2">
+        <!-------------------------------------------------current-->
+        <div class="current">
+          <div class="headerCurrent">
+            <h2>current weather</h2>
+            <h2 id="dateCurrent"></h2>
+          </div>
+          <div class="bodyCurrent">
+            <div>
+              <img id="descriptionIMG" src=" " alt="descriptionIMG" />
+              <h2 id="descriptionTXT"></h2>
+            </div>
+            <div>
+              <h2 id="currentTemp"></h2>
+              <h2 id="realtemp"></h2>
+            </div>
+            <div>
+              <h2 id="Sunrice">Sunrice:</h2>
+              <h2 id="Sunset">Sunset:</h2>
+            </div>
+          </div>
+        </div>
+        <!-------------------------------------------------hourly-->
+        <div class="hourly">
+          <div class="headerHorly">
+            <h2>hourly</h2>
+          </div>
+          <div class="tableTemp">
+            <table>
+              <tr>
+                <th>TODAY</th>
+                <th>7pm</th>
+                <th>8pm</th>
+                <th>9pm</th>
+                <th>10pm</th>
+                <th>11pm</th>
+                <th>12pm</th>
+              </tr>
+              <tr id="tableIMG">
+                <td><img src="" alt="" /></td>
+                <td><img src="" alt="" /></td>
+                <td><img src="" alt="" /></td>
+                <td><img src="" alt="" /></td>
+                <td><img src="" alt="" /></td>
+                <td><img src="" alt="" /></td>
+                <td><img src="" alt="" /></td>
+              </tr>
+              <tr id="forecast">
+                <td>Forecast</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr id="temp">
+                <td>Temp(&#176;C)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr id="rFeel">
+                <td>RealFeel</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr id="wind">
+                <td>Wind(km/h)</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="cityAround">
+          <div class="headerCityAround">
+            <h2>nearby places</h2>
+          </div>
+          <div   class="bodyCityAround">
+            <div >
+            <h2></h2>
+            <img src="" alt="" />
+            <h3></h3>
+          </div>
+          <div>
+            <h2></h2>
+            <img src="" alt="" />
+            <h3></h3>
+          </div>
+          <div>
+            <h2></h2>
+            <img src="" alt="" />
+            <h3></h3>
+          </div>
+          <div>
+            <h2></h2>
+            <img src="" alt="" />
+            <h3></h3>
+          </div>
+        </div>
+      </div>
+      <footer>
+    
+      </footer>
+    </div>
+    <div> </div>
+  </body>
+</html>
